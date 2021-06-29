@@ -28,10 +28,11 @@ Only one valid answer exists.
  
  
  Solution :
+ // nums = [2,7,11,15]
  
  class Solution {
     public int[] twoSum(int[] nums, int target) {
-        // nums = [2,7,11,15]
+        
         
         ArrayList<Integer> s;
 
