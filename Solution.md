@@ -83,7 +83,7 @@ Explanation: 342 + 465 = 807.
     class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result= null, head=null;
-        int count=0,val1,val2,top,carry=0;
+        int count=0,val1,val2,top,add=0;
         ListNode prev = null;
         ListNode next = null;
         
@@ -97,18 +97,19 @@ Explanation: 342 + 465 = 807.
             sum += l2.val;
             l2 = l2.next;
           }
-          sum += carry;
+          sum += add;
           int value  = sum%10;
-          carry = sum/10;
+          add = sum/10;
           ListNode node = new ListNode(value);
           if(result != null) {
             result.next = node;
             result = result.next;
           } else {
-            result = head = node;
+            result = head;
+            head = node;
           }
-        }if(carry > 0) {
-          result.next = new ListNode(carry);
+        }if(add > 0) {
+          result.next = new ListNode(add);
         }
         
         //Si on veut inverser le node.
