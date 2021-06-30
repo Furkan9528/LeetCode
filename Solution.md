@@ -29,7 +29,7 @@ Only one valid answer exists.
  
  Solution :
  
-   ## nums = [2,7,11,15]
+   # nums = [2,7,11,15]
         
     class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -63,7 +63,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 Example 1:
 
 
-Input: l1 = [2,4,3], l2 = [5,6,4]
+# Input: l1 = [2,4,3], l2 = [5,6,4]
 Output: [7,0,8]
 Explanation: 342 + 465 = 807.
 
@@ -78,9 +78,10 @@ Explanation: 342 + 465 = 807.
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
     
+    class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result= null, head=null;
         int count=0,val1,val2,top,carry=0;
         ListNode prev = null;
